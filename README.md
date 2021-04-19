@@ -1,4 +1,4 @@
-# Make Hello World Starter Template (React)
+# Simple Generative design with Make 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
