@@ -44,12 +44,12 @@ html,body{background-color:#ddd;}
 }
 
 section {
-   box-shadow: 0 0 0 .2em #999; 
+ 
    font-family: 'Krona One', sans-serif;
   display: grid;
   place-content: center;
   background-color:white; 
-  font-size: 5vw; 
+  font-size: 12vw; 
   font-weight:800;
   position: fixed;
   top: 0;
@@ -57,10 +57,12 @@ section {
   bottom: 0;
   left: 0;
   flex: middle;
+  transition: background .5s ease;
    opacity:0;
  transform: scale(.6) translate(0%,0);
 }
 
+@media (orientation: portrait) {section{  font-size: 10vw; }}
 
  
 .n1:not(:checked) ~ .s1,
@@ -70,19 +72,19 @@ section {
 .n5:not(:checked) ~ .s5,
 .n6:not(:checked) ~ .s6,
 .n7:not(:checked) ~ .s7,
-.n8:not(:checked) ~ .s8 {  animation: bye 1s ease-in-out forwards}
+.n8:not(:checked) ~ .s8 {  animation: bye 1s cubic-bezier(.83,0,.35,1) forwards}
 
 @keyframes bye{
-  0%{opacity:0; background-color:white; z-index:7;}
+  0%{opacity:1; background-color:white; z-index:7;}
   10%{opacity:1}
-  50%{transform:scale(.6) rotate(2deg) translate(5%,0);z-index:8}
-  100%{transform:scale(.6) translate(0%,0); opacity:1; z-index:5;}
+  50%{transform:scale(.6) rotate(2deg) translate(15%,0);z-index:8; background-color:#fff}
+  100%{transform:scale(.6) translate(0%,0); opacity:1; z-index:5; background-color:#ccc}
 }
 
 
 @keyframes hello{
-  0%{opacity:1; background-color:white; z-index:7;}
-  50%{transform:scale(.6)   translate(-30%,-20%) rotate(-10deg)  translate(-60%,0);}
+  0%{opacity:1; background-color:#fff; z-index:1; transform:scale(.2)   translate(-50%,-20%) rotate(-10deg)  translate(-60%,0);}
+  40%{z-index:1;}50%{transform:scale(.6)   translate(-40%,-20%) rotate(-10deg)  translate(-60%,0);  z-index:9;}
   100%{transform:scale(.6) translate(0%,0); opacity:1; z-index:9}
 }
 
@@ -99,7 +101,7 @@ section {
   background-color: #fff;
   z-index: 1;
   transform:  scale(.6) translate(0%,0);
-   animation: hello 1.1s ease-in-out forwards
+   animation: hello 1s cubic-bezier(.83,0,.35,1) forwards
 }
 
 @keyframes hereiam {
