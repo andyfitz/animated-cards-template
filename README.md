@@ -1,4 +1,4 @@
-# Simple Generative design with Make 
+# animated cards with Make 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
