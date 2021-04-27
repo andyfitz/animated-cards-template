@@ -11,7 +11,7 @@ function checknext() {
 
 setInterval(function () {
   checknext();
-}, 5000);
+}, 4000);
 
 
 function App({ post, messageOne, messageTwo, messageThree, messageFour, messageFive, messageSix, messageSeven, messageEight,}) {
