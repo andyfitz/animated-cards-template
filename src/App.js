@@ -3,14 +3,15 @@ import './App.css';
  
 function checknext() {
   if (document.querySelector(".last:checked")) {
+    document.querySelector(".first").checked = true;
   } else {
+    document.querySelector(".nav:checked").nextElementSibling.checked = true;
+  }
+}
 
-function App({ headline, showLogos, backgroundImage }) {
-  return (
-    <div className="App" style={{ backgroundImage: `url('${backgroundImage}')` }}>
-      {showLogos === 'true' && (
-        <Logos logoOne={<MakeLogo />} logoTwo={<ReactLogo />} />
-      )}
+setInterval(function () {
+  checknext();
+}, 5000);
 
 
 function App({ post, messageOne, messageTwo, messageThree, messageFour, messageFive, messageSix, messageSeven, messageEight,}) {
